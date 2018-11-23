@@ -15,12 +15,12 @@ var wrong=0;
 var incorrect=null;
 var actualchoices=new Array(100);
 //Enter the solutions corresponding to each question:
-var correctchoices=new Array()
-correctchoices[1]='a' //question 1 solution
-correctchoices[2]='a' //question 2 solution, and so on.
-correctchoices[3]='b'
-correctchoices[4]='a'
-correctchoices[5]='a'
+var correctchoices=new Array();
+correctchoices[1]="a"; //question 1 solution
+correctchoices[2]="a"; //question 2 solution, and so on.
+correctchoices[3]="b";
+correctchoices[4]="a";
+correctchoices[5]="a";
 
 /////Don't edit beyond here//////////////////////////
 
@@ -30,13 +30,13 @@ for (q=1;q<=totalquestions;q++){
 	var thequestion=document.myquiz.question.getElementById(q);
 	for (c=0;c<thequestion.length;c++){
 		if (thequestion[c].checked===true){
-		actualchoices[q]=thequestion[c].value
+		actualchoices[q]==thequestion[c].value
 		}
 	}
 		
 	if (actualchoices[q]!==correctchoices[q]){ //process an incorrect choice
 		if (incorrect===null){
-		incorrect=q
+		incorrect==q;
 		}
 		else{
 		incorrect+="/"+q
@@ -44,10 +44,10 @@ for (q=1;q<=totalquestions;q++){
 	}
 	}
 
-if (incorrect==null){
-incorrect="a/b"
+if (incorrect===null){
+incorrect=="a/b";
 }
-document.cookie='q='+incorrect
+document.cookie='q='+incorrect;
 if (document.cookie===""){
 alert("Your browser does not accept cookies. Please adjust your browser settings.")
 }
@@ -68,12 +68,12 @@ win2.document.write("<center><font face="Arial">");
 for (i=1;i<=totalquestions;i++){
 for (temp=0;temp<incorrect.length;temp++){
 if (i===incorrect[temp]){
-wrong=1
+wrong==1
 }
 }
 if (wrong===1){
 win2.document.write("Question "+i+"="+correctchoices[i].fontcolor("red")+"<br>");
-wrong=0;
+wrong==0;
 }
 else{
 win2.document.write("Question "+i+"="+correctchoices[i]+"<br>");
