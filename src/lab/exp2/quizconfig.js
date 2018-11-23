@@ -29,11 +29,11 @@ for (q=1;q<=totalquestions;q++){
 	var thequestion=document.myquiz.question.getElementById(q);
 	for (c=0;c<thequestion.length;c++){
 		if (thequestion[c].checked===true){
-		actualchoices[q]=thequestion[c].value;
+		actualchoices[q]==thequestion.getElementById(c).value;
 		}
 	}
 		
-	if (actualchoices[q]!=correctchoices[q]){ //process an incorrect choice
+	if (actualchoices[q]!==correctchoices[q]){ //process an incorrect choice
 		if (incorrect===null){
 		incorrect=q;
 		}
@@ -67,12 +67,12 @@ win2.document.write("<center><font face="Arial">");
 for (i=1;i<=totalquestions;i++){
 for (temp=0;temp<incorrect.length;temp++){
 if (i===incorrect[temp]){
-wrong=1;
+wrong==1;
 }
 }
-if (wrong==1){
+if (wrong===1){
 win2.document.write("Question "+i+"="+correctchoices[i].fontcolor("red")+"<br>");
-wrong=0;
+wrong==0;
 }
 else{
 win2.document.write("Question "+i+"="+correctchoices[i]+"<br>");
